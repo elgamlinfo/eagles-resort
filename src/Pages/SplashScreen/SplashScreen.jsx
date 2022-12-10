@@ -2,7 +2,9 @@ import React from 'react'
 import './style.scss'
 import video from "../../assets/splash.mp4"
 import logo from '../../assets/logo.png'
+import { useNavigate } from 'react-router-dom'
 const SplashScreen = () => {
+  const navigate = useNavigate()
   return (
     <div className='splash_screen'>
       <video autoPlay loop muted playsInline height={"100%"}  className='back_video'>
@@ -15,7 +17,7 @@ const SplashScreen = () => {
             <h1>eagles resort</h1>
           </div>
           <div className='lang_btns'>
-            <button className='lang_btn'>english</button>
+            <button className='lang_btn' onClick={() => navigate('/eagles')}>english</button>
             <button className='lang_btn'>عربي</button>
           </div>
         </div>
